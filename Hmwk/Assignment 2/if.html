@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<script>
+            /*	CIS14a - 48940
+                Author: Mauricio S. Perez
+				Purpose:  Assignment 2 - Paycheck with If Construct
+                Sept 15th, 2015
+            */
+        </script>
+        <meta charset="utf-8">
+        <title>Paycheck with a If construct</title>
+    </head>
+    
+    <body>
+        <script type="text/javascript">
+		    //Declare Variables
+			var PayRate = 1.11;	   // PayRate
+			var Hours 	= 1.11;	  // Hours Worked
+			var type 	= 0;	 // Type of time worked(1=straight, 2=double, 3=triple)
+			var Paycheck= 1.11;	// Total Paycheck (Will Equal (Payrate*Type)*Hours Worked)
+			
+			//Input PayRate
+			PayRate  = prompt("What's your Pay Rate per hour?");
+			
+			//Input Hours Worked
+			Hours 	 = prompt("How many hours did you work this week?");
+			
+			//Figure out type of payrate - if statements
+			if(Hours <  0)                  type=-1;		//Negative Hours
+			if(Hours == 0) 					type=0;		   //No Hours
+			if(Hours >0 && Hours <=20) 		type=1;		  //Straight Time
+		    if(Hours >20 && Hours <=  40) 	type=2; 	 //Double Time
+			if(Hours >40 && Hours <=72) 	type=3;		//Triple Time
+			if(Hours >100)                type="Not a possible PayRate";
+
+			//Negative or Zero Hours
+			if(type<=0)	document.write("<p>You Cannot Work " + Hours + " Hours!!!!</p>");
+
+			//Negative or Zero Payrate
+			if(PayRate<=0)	document.write("<p>You Cannot Be Paid $" + PayRate + " Dollars!!!!</p>");
+			
+			//Less than Minimum Wage Prompt
+			if(PayRate>0 && PayRate<8){
+			document.write
+			("<p>You Should check your states labor laws. You earn $" 
+			+ PayRate + " Dollars an hour!!!</p>");
+			}
+			
+			//Output the results - ONLY OUTPUT WITH 1,2,3 Types and if Payrate>0
+			if(type>=1 && type<=3 && PayRate>0)	{
+				//Calculate Payrate
+				Paycheck=(PayRate*type*Hours);			//Paycheck
+
+				//Print Check with Hours and Payrate
+				document.write("<p>Your Paycheck, with " + Hours + 
+				" hours worked at a rate of " + (PayRate*type).toFixed(2) + 
+				" is: $" + Paycheck.toFixed(2) + "</p>");
+			}
+
+			</script>
+    </body>
+</html>

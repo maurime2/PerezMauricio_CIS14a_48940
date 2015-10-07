@@ -1,9 +1,9 @@
 At github place in Hmwk folder Assignment2.
 
 Use if, if-else constructors to determine a Paycheck where the inputs are Hours Worked and Payrate.
-	Assume straight time for the first 20 hours, 
-	double time for the next 20 hours and 
-	triple time for anything over 40 hours.
+		- Assume straight time for the first 20 hours, 
+		- double time for the next 20 hours and 
+		- triple time for anything over 40 hours.
 
 	Place this assignment in your homework folder.
 

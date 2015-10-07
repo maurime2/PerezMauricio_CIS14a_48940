@@ -1,0 +1,12 @@
+At github place in Hmwk folder Assignment2.
+
+Use if, if-else constructors to determine a Paycheck where the inputs are Hours Worked and Payrate.
+	Assume straight time for the first 20 hours, 
+	double time for the next 20 hours and 
+	triple time for anything over 40 hours.
+
+	Place this assignment in your homework folder.
+
+	Zip folder and submit here as well as sending an email which copies yourself to mark.lehr@rcc.edu
+	with
+	Subject:  Lastname, Firstname - Assignment 2 09/16/15 - 48940

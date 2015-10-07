@@ -1,0 +1,17 @@
+Create a paycheck table, i.e. with and without 1 dimensional parallel arrays.
+
+	Col 1 -> hours 0-72
+
+	Col 2 -> Gross Pay $'s where double time starts at 20 hours and triple time starts at 40 hours
+
+	Col 3 -> Pay rate in $'s/hour
+
+	Col 4 -> Taxes at 10%
+
+	Col 5 -> Net Pay $'s
+
+
+Send me a link to your repository by posting here and creating an email which copies yourself to
+
+mark.lehr@rcc.edu with subject: 
+Perez, Mauricio - Assignment 4.0 -  48940

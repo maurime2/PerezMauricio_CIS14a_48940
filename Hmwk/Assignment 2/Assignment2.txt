@@ -9,4 +9,5 @@ Use if, if-else constructors to determine a Paycheck where the inputs are Hours 
 
 	Zip folder and submit here as well as sending an email which copies yourself to mark.lehr@rcc.edu
 	with
-	Subject:  Lastname, Firstname - Assignment 2 09/16/15 - 48940
+	Subject:  
+	Perez, Mauricio - Assignment 2 09/16/15 - 48940

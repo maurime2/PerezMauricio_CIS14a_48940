@@ -1,8 +1,11 @@
 Complete: 
 	- truth table in the repository 									- COMPLETED
-	- place 3 columns in the pay check table which can take 2 payrates.
+	- place 3 columns in the pay check table which can take 2 payrates. - Completed
 
 Zip folder and submit here as well as sending an email which copies yourself to mark.lehr@rcc.edu
 
 Subject: 
 Perez, Mauricio - Assignment 3 09/23/15 - 48940
+
+Git Hub:
+https://github.com/maurime2/PerezMauricio_CIS14a_48940/tree/master/Hmwk/Assignment%203

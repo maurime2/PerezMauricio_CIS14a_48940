@@ -2,7 +2,7 @@
 <html>
     <head>
     <meta charset="utf-8">
-    <title>Pay Check</title>
+    <title>Paycheck: Do While Loop</title>
     <script>
 	/*
 		Mauricio S. Perez
@@ -22,10 +22,13 @@
     <table width="200" border="1">
         <tr>
           <th>Hours</th>
-          document.write('<th>Pay Check 1</th>')
-		  <th>Pay Check 2: </th>
-        </tr>
+          <script>
+          	document.write("<th>Pay Check 1: $"+payRate+"/hr</th>");
+			document.write("<th>Pay Check 2: $"+payRate2+"/hr</th>");
+		  </script>
+		</tr>
         <script>
+			//Declare variables
 			var nHours=85;//Total number of hours in table
 			var payChk=0; //Initialize the pay check = 0
 			var payChk2=0; //Initialize the pay check = 0

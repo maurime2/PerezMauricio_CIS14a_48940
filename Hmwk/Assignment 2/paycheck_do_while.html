@@ -5,24 +5,30 @@
     <title>Pay Check</title>
     <script>
 	/*
-		Dr. Mark E. Lehr
+		Mauricio S. Perez
 		Sept 21st, 2015
-		Purpose: Do-While-Loop
+		Purpose: Paycheck: Do-While-Loop
 	*/
 	</script>
     </head>
     
     <body>
+	    <script>
+			//Declare variables
+			var payRate=prompt("Calculate your Paycheck table \n Pay Rate $'s");
+			var payRate2=prompt("Calculate your Paycheck table \n Pay Rate $'s");
+		</script>
+	
     <table width="200" border="1">
         <tr>
           <th>Hours</th>
-          <th>Pay Check</th>
+          document.write('<th>Pay Check 1</th>')
+		  <th>Pay Check 2: </th>
         </tr>
         <script>
-			//Declare variables
-			var payRate=prompt("Calculate your Paycheck table \n Pay Rate $'s");
 			var nHours=85;//Total number of hours in table
 			var payChk=0; //Initialize the pay check = 0
+			var payChk2=0; //Initialize the pay check = 0
 			var dblTim=20;//Double time starts
 			var trpTim=40;//Triple time starts
 			var hours=0;
@@ -30,13 +36,17 @@
 				document.write("<tr>");
 				  if(hours<=dblTim){
 			           payChk=hours*payRate;
+					   payChk2=hours*payRate2;
 				  }else if(hours<trpTim){
 					   payChk=dblTim*payRate+(hours-dblTim)*2*payRate;
+					   payChk2=dblTim*payRate2+(hours-dblTim)*2*payRate2;
 				  }else{
 					   payChk=dblTim*payRate+(trpTim-dblTim)*2*payRate+(hours-trpTim)*3*payRate;
+					   payChk2=dblTim*payRate2+(trpTim-dblTim)*2*payRate2+(hours-trpTim)*3*payRate2;
 				  }
 				  document.write("<td>"+hours+"</td>");
 				  document.write("<td>$"+payChk.toFixed(2)+"</td>");
+				  document.write("<td>$"+payChk2.toFixed(2)+"</td>");
 				document.write("</tr>");
 			}while(++hours<=nHours);
 		</script>

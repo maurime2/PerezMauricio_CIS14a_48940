@@ -17,7 +17,7 @@
         <tr>
 			<th>Hours</th>
 			<th>Gross Pay</th>
-			<th>Pay Rate</th>
+			<th>Pay Rate: $'s/hour</th>
 			<th>Taxes: 10%</th>
 			<th>Net-Pay</th>
         </tr>
@@ -26,7 +26,7 @@
 		
 			//Declare variables
 			var payRate=prompt("Calculate your Paycheck table \n Pay Rate $'s");
-			var nHours=85;  //Total number of hours in table
+			var nHours=72;  //Total number of hours in table
 			var dblTim=20; //Double time starts
 			var trpTim=40;//Triple time starts
 
@@ -42,18 +42,18 @@
 			  hrsWrkd[hours]=hours;
 			  if(hours<=dblTim){
 				   gPay[hours]=hours*payRate;
-				   pRate[hours]=1*payRate;					  //fill Payrate Array
+				   pRate[hours]=gPay[hours]/hours;			  //fill Payrate Array ($'s/hour)
 				   taxes[hours]=gPay[hours]*.1;				 //fill Tax Array
 				   netPay[hours]=gPay[hours]-taxes[hours];	//fill Net Pay Array
 				   
 			  }else if(hours<trpTim){
 				   gPay[hours]=dblTim*payRate+(hours-dblTim)*2*payRate;
-				   pRate[hours]=2*payRate;					  //fill Payrate Array
+				   pRate[hours]=gPay[hours]/hours;			  //fill Payrate Array
 				   taxes[hours]=gPay[hours]*.1;				 //fill Tax Array
 				   netPay[hours]=gPay[hours]-taxes[hours];	//fill Net Pay Array
 			  }else{
 				   gPay[hours]=dblTim*payRate+(trpTim-dblTim)*2*payRate+(hours-trpTim)*3*payRate;
-				   pRate[hours]=3*payRate;					  //fill Payrate Array
+				   pRate[hours]=gPay[hours]/hours;			  //fill Payrate Array
 				   taxes[hours]=gPay[hours]*.1;				 //fill Tax Array
 				   netPay[hours]=gPay[hours]-taxes[hours];	//fill Net Pay Array
 			  }

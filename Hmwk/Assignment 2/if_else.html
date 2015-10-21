@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<script>
+            /*	CIS14a - 48940
+                Author: Mauricio S. Perez
+				Purpose:  Assignment 2 - Paycheck with If Construct
+                Sept 15th, 2015
+            */
+        </script>
+        <meta charset="utf-8">
+        <title>Paycheck with a If construct</title>
+    </head>
+    
+    <body>
+        <script type="text/javascript">
+		    //Declare Variables
+			var PayRate = 1.11;	   // PayRate
+			var Hours 	= 1.11;	  // Hours Worked
+			var type 	= 0;	 // Type of time worked(1=straight, 2=double, 3=triple)
+			var Paycheck= 1.11;	// Total Paycheck (Will Equal (Payrate*Type)*Hours Worked)
+			var twenty = 20;
+			var fourty = 40;
+			var temp = 0;
+			
+			//Input PayRate
+			PayRate  = prompt("What's your Pay Rate per hour?");
+			
+			//Input Hours Worked
+			Hours 	 = prompt("How many hours did you work this week?");
+			
+			//Figure out type of payrate - if statements
+			if(Hours <  0)                  type=-1;		//Negative Hours
+			if(Hours == 0) 					type=0;		   //No Hours
+			if(Hours >0 && Hours <=20) 		type=1;		  //Straight Time
+		    if(Hours >20 && Hours <=  40) 	type=2; 	 //Double Time
+			if(Hours >40 && Hours <=72) 	type=3;		//Triple Time
+			if(Hours >72)                	type=4;
+
+			//Negative or Zero Hours
+			if(type<0)	document.write("<p>You Cannot Work " + Hours + " Hours!!!!</p>");
+
+			//Negative or Zero Payrate
+			if(PayRate<=0)	document.write("<p>You Cannot Be Paid $" + PayRate + " Dollars!!!!</p>");
+			
+			//Less than Minimum Wage Prompt
+			if(PayRate>0 && PayRate<8){
+			document.write
+			("<p>You Should check your states labor laws. You earn $" 
+			+ PayRate + " Dollars an hour!!!</p>");
+			}
+			
+			////Paytate 1: Straight Time.
+			if(type==1 && PayRate>0)	{
+			
+				//Calculate Payrate
+				Paycheck=(PayRate*type*Hours);			//Paycheck
+
+				//Print Check with Hours and Payrate
+				document.write("<p>Your Paycheck, with " + (Hours*1).toFixed(2) + 
+				" hours worked at a rate of " + (PayRate*type).toFixed(2) + 
+				", the amount is: $" + Paycheck.toFixed(2) + "</p>");
+			}
+			
+			
+			//Paytate 2: Double Time!!
+			else if(type==2 && PayRate>0)	{
+				
+				//Calculate Payrate
+				temp = (PayRate*1*twenty);			//Paycheck
+
+				//Print Check with Hours and Payrate
+				document.write("<p>With " + twenty.toFixed(2) + 
+				" hours worked at a rate of " + (PayRate*1).toFixed(2) + 
+				", the amount is: $" + temp.toFixed(2) + "</p>");
+				
+				Paycheck = temp;
+				
+			    //Calculate Payrate
+				temp = PayRate*2*(Hours-twenty);			//Paycheck
+
+				//Print Check with Hours and Payrate
+				document.write("<p>With " + (Hours-twenty).toFixed(2) + 
+				" hours worked at a rate of " + (PayRate*type).toFixed(2) + 
+				", the amount is: $" + temp.toFixed(2) + "</p>");
+				
+				Paycheck = Paycheck + temp;			
+			}
+			
+			//Paytate 3: TRIPLE TIME!!!
+			else if(type==3 && PayRate>0)	{
+
+				//Calculate Payrate: Straight Time
+				temp = (PayRate*1*twenty);			//Paycheck
+
+				//Print Check with Hours and Payrate
+				document.write("<p>With " + twenty.toFixed(2) + 
+				" hours worked at a rate of " + (PayRate*1).toFixed(2) + 
+				", the amount is: $" + temp.toFixed(2) + "</p>");
+				
+				Paycheck = temp;
+				
+			    //Calculate Payrate: Double Time
+				temp = PayRate*2*(twenty);			//Paycheck
+
+				//Print Check with Hours and Payrate
+				document.write("<p>With " + (twenty).toFixed(2) + 
+				" hours worked at a rate of " + (PayRate*2).toFixed(2) + 
+				", the amount is: $" + temp.toFixed(2) + "</p>");
+				
+				Paycheck = Paycheck + temp;
+				
+				//Calculate Payrate: Triple Time
+				temp = PayRate*type*(Hours-fourty);			//Paycheck
+
+				//Print Check with Hours and Payrate
+				document.write("<p>With " + (Hours-fourty).toFixed(2) + 
+				" hours worked at a rate of " + (PayRate*type).toFixed(2) + 
+				", the amount is: $" + temp.toFixed(2) + "</p>");
+				
+				Paycheck = Paycheck + temp;
+			
+			}
+			
+			if((type==3||type==2||type==1) && PayRate>0){
+			//Print Final Paycheck
+			document.write("<p>Your Final Paycheck with " + Hours+ " Hours worked is: $" + Paycheck.toFixed(2) + "</p>");
+			}
+
+			if(type==4){
+			//Print Final Paycheck
+			document.write("<p>It is not LEGAL for your employer to work you " + Hours + " in a week!!!</p>");
+			}
+			
+			</script>
+    </body>
+</html>

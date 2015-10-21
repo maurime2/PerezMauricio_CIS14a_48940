@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<script>
+            /*
+                RCC Class
+                Sept 14th, 2015
+                Purpose:  Homework with Ternary Operator
+            */
+        </script>
+        <meta charset="utf-8">
+        <title>What's Your Grade with a Ternary Operator</title>
+    </head>
+    
+    <body>
+        <script type="text/javascript">
+		    //Input score, output the grade
+			var score = prompt("What's your score?");
+			var grade = score <    0 ? "Not a possible score" :
+						score <   60 ? "an F" :
+						score <   70 ? "a D"  :
+						score <   80 ? "a C"  :
+						score <   90 ? "a B"  : 
+					    score <= 100 ? "an A":
+							           "Not a possible score";
+            //Output the results
+			document.write("<p>Your grade is " + grade + ".</p>");
+        </script>
+    </body>
+</html>

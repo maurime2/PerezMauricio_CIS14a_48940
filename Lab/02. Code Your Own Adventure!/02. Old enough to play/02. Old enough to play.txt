@@ -1,0 +1,23 @@
+Old enough to play?
+This will involve two pieces of code:
+
+First we will use prompt to ask a user for their age, like this:
+
+var age = prompt("What's your age");
+The variable age will hold the user's response.
+
+Then we will use an if/else statement based on the age of the user. Here's an outline of the code, similar to what we've seen before:
+
+if(age is less than 13) 
+{
+    // do this code
+}
+else   // "otherwise"
+{
+    // do this code
+}
+Instructions
+Under the existing code, declare a variable age.
+Make age equal to prompt("What's your age");. See the example above.
+Then write an if/else statement. If age is less than 13, use console.log to tell the user that they're allowed to play but you take no responsibility.
+Else, use console.log and give them an encouraging message to play on!

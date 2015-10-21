@@ -1,0 +1,17 @@
+	In your repository, create a Hmwk, Class, Lab, Proj, and Book folder.
+
+	In your Book folder, create a Book1 folder.
+
+	Create webpages for each script in the book, run and place in your Book1 folder.
+
+	As you are writing and testing out your code continuously push to your repository.
+
+	Next, create a page which inputs a score and outputs a grade using the ternary operator.
+
+	Place this in your homework by creating an Assignment1 folder.
+
+Send me a link to your repository by posting here and creating an email which copies yourself to mark.lehr@rcc.edu
+with subject: Lastname, Firstname - Assignment 1 -  48940
+
+Zip your work and attach here as well as your email.
+

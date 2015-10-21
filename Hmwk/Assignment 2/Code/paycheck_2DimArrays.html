@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Pay Check</title>
+    <script>
+	/*
+		Dr. Mark E. Lehr
+		Sept 21st, 2015
+		Purpose: For-Loop
+	*/
+	</script>
+    </head>
+    
+    <body>
+    <table width="200" border="1">
+        <tr>
+          <th>Hours</th>
+        <script>
+			//Declare variables
+			var payRbeg=10;//Beginning Payrate range
+			var payRend=40;//Ending Payrate range
+			var payRinc=5;//Payrate increment
+			var nHours=85;//Total number of hours in table
+			var dblTim=20;//Double time starts
+			var trpTim=40;//Triple time starts
+			//Declare 1-Dim arrays
+			var payRate=[];
+			var hrsWrkd=[];
+			var payChk=[];
+			//Fill the payRate array
+			for(var indx=0,rate=payRbeg;rate<=payRend;indx++,rate+=payRinc){
+				payRate[indx]=rate;
+				payChk[indx]=[];
+				document.write("<th>"+rate+"$/hr</th>");
+			}
+			document.write("</tr>");
+			//Fill the 1-Dim parallel array with data
+			for(var hours=0;hours<=nHours;hours++){
+			  hrsWrkd[hours]=hours;
+			  for(var indx=0;indx<payRate.length;indx++){
+				  if(hours<=dblTim){
+					   payChk[indx][hours]=hours*payRate[indx];
+				  }else if(hours<trpTim){
+					   payChk[indx][hours]=dblTim*payRate[indx]+(hours-dblTim)*2*payRate[indx];
+				  }else{
+					   payChk[indx][hours]=dblTim*payRate[indx]+
+					          (trpTim-dblTim)*2*payRate[indx]+(hours-trpTim)*3*payRate[indx];
+				  }
+			  }
+			}
+			//Display the arrays
+			for(var hours=0;hours<=nHours;hours++){
+				document.write("<tr>");
+				  document.write("<td>"+hrsWrkd[hours]+"</td>");
+				  for(var indx=0;indx<payRate.length;indx++){
+				  	document.write("<td>$"+payChk[indx][hours].toFixed(2)+"</td>");
+				  }
+				document.write("</tr>");
+			}
+		</script>
+	</table>
+    </body>
+</html>

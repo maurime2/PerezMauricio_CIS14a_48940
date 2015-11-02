@@ -2,73 +2,24 @@
 <html>
     <head>
     <meta charset="utf-8">
-    <title>Pay Check: 1 Dimensional Array</title>
+	<script type="text/javascript" src="./functions/DispTable.js"></script>
+    <title>Pay Check: 1 Dimensional Array with Function(DispTable)</title>
     <script>
 	/*
 		Mauricio S. Perez
-		Sept 21st, 2015
-		Purpose: PayCheck: 1 Dimensional Array
+		Oct 1st, 2015
+		Purpose: PayCheck: 1 Dimensional Array with Function(DispTable)
 	*/
 	</script>
     </head>
-    
     <body>
     <table width="200" border="1">
-        <tr>
-			<th>Hours</th>
-			<th>Gross Pay</th>
-			<th>Pay Rate: $'s/hour</th>
-			<th>Taxes: 10%</th>
-			<th>Net-Pay</th>
-        </tr>
-        <script>
-	
-		
+		<script>
 			//Declare variables
-			var payRate=prompt("Calculate your Paycheck table \n Pay Rate $'s");
-			var nHours=72;  //Total number of hours in table
-			var dblTim=20; //Double time starts
-			var trpTim=40;//Triple time starts
-
-			//Declare 1-Dim arrays
-			var hrsWrkd=[];		// Hours Worked
-			var gPay=[];	   // Gross Pay
-			var pRate=[];	  // Pay Rate
-			var taxes=[];	 // Taxes
-			var netPay=[];	// Net Pay After Taxes
-			
-			//Fill the 1-Dim parallel array with data
-			for(var hours=0;hours<=nHours;hours++){
-			  hrsWrkd[hours]=hours;
-			  if(hours<=dblTim){
-				   gPay[hours]=hours*payRate;
-				   pRate[hours]=gPay[hours]/hours;			  //fill Payrate Array ($'s/hour)
-				   taxes[hours]=gPay[hours]*.1;				 //fill Tax Array
-				   netPay[hours]=gPay[hours]-taxes[hours];	//fill Net Pay Array
-				   
-			  }else if(hours<trpTim){
-				   gPay[hours]=dblTim*payRate+(hours-dblTim)*2*payRate;
-				   pRate[hours]=gPay[hours]/hours;			  //fill Payrate Array
-				   taxes[hours]=gPay[hours]*.1;				 //fill Tax Array
-				   netPay[hours]=gPay[hours]-taxes[hours];	//fill Net Pay Array
-			  }else{
-				   gPay[hours]=dblTim*payRate+(trpTim-dblTim)*2*payRate+(hours-trpTim)*3*payRate;
-				   pRate[hours]=gPay[hours]/hours;			  //fill Payrate Array
-				   taxes[hours]=gPay[hours]*.1;				 //fill Tax Array
-				   netPay[hours]=gPay[hours]-taxes[hours];	//fill Net Pay Array
-			  }
-			}
-			//Display the arrays
-			for(var hours=0;hours<=nHours;hours++){
-				document.write("<tr>");
-				  document.write("<td>"+hrsWrkd[hours]+"</td>");
-				  document.write("<td>$"+gPay[hours].toFixed(2)+"</td>");
-				  document.write("<td>$"+pRate[hours].toFixed(2)+"</td>");	  //Fill Payrate Array
-				  document.write("<td>$"+taxes[hours].toFixed(2)+"</td>");	 //Tax  Payrate Array
-				  document.write("<td>$"+netPay[hours].toFixed(2)+"</td>");	//Tax  Payrate Array
-				document.write("</tr>");
-			}
-		</script>
+			var payRate=prompt("Calculate your Paycheck table \n Pay Rate $'s");	 //Prompt User
+			DispTable(payRate);														//Print Table
+		//The End
+		</script>																	
 	</table>
     </body>
 </html>

@@ -17,8 +17,21 @@
 		<script>
 			//Declare variables
 			var payRate=prompt("Calculate your Paycheck table \n Pay Rate $'s");	 //Prompt User
-			DispTable(payRate);														//Print Table
-		//The End
+			var nHours=72;  //Total number of hours in table		//to be passed through. topOfSpread is initialy
+			var dblTim=20; //Double time starts					   //called to start off the spreadsheet.
+			var trpTim=40;//Triple time starts
+
+			//Declare 1-Dim arrays
+			var hrsWrkd=[];		// Hours Worked
+			var gPay=[];	   // Gross Pay
+			var pRate=[];	  // Pay Rate
+			var taxes=[];	 // Taxes
+			var netPay=[];	// Net Pay After Taxes
+			
+			//Call Functions
+			fillArray(payRate,nHours,dblTim,trpTim,hrsWrkd,gPay,pRate,taxes,netPay);		   //Fill Arrays
+			showArray(payRate,nHours,dblTim,trpTim,hrsWrkd,gPay,pRate,taxes,netPay);		  // Show Arrays
+			DispTable(payRate,payRate,nHours,dblTim,trpTim,hrsWrkd,gPay,pRate,taxes,netPay); //Print Table
 		</script>																	
 	</table>
     </body>

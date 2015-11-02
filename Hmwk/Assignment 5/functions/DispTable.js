@@ -20,20 +20,7 @@
 			document.write("</tr>"); 
 		}//End of Function topOfSpread
 		
-		
-		function DispTable(payRate){								  //This Function calculates and prints the 
-			topOfSpread();											 //savings spreadsheet. Only the payrate needs
-			var nHours=72;  //Total number of hours in table		//to be passed through. topOfSpread is initialy
-			var dblTim=20; //Double time starts					   //called to start off the spreadsheet.
-			var trpTim=40;//Triple time starts
-
-			//Declare 1-Dim arrays
-			var hrsWrkd=[];		// Hours Worked
-			var gPay=[];	   // Gross Pay
-			var pRate=[];	  // Pay Rate
-			var taxes=[];	 // Taxes
-			var netPay=[];	// Net Pay After Taxes
-			
+		function fillArray(payRate,nHours,dblTim,trpTim,hrsWrkd,gPay,pRate,taxes,netPay){
 			//Fill the 1-Dim parallel array with data
 			for(var hours=0;hours<=nHours;hours++){
 			  hrsWrkd[hours]=hours;
@@ -55,7 +42,76 @@
 				   netPay[hours]=gPay[hours]-taxes[hours];	//fill Net Pay Array
 			  }
 			}//End Fill the 1-Dim parallel array with data
-			
+		}//End of fillArray Function
+		
+		function showArray(payRate,nHours,dblTim,trpTim,hrsWrkd,gPay,pRate,taxes,netPay){
+				//Prompt Use of Arrays
+				document.write("The following arrays will be used in the table: ");
+				
+				//Hours Worked
+				  document.write("<br>Hours Worked:<br>");		//Shows Hours Worked
+				  for(var hours=0;hours<=nHours;hours++){
+					  document.write(hrsWrkd[hours]);
+					  if(hours<nHours){
+						document.write(", ");  
+					  }
+					  else{
+						document.write(". <br>");  
+					  }
+				  }
+				  
+				//Gross Pay
+				  document.write("Gross Pay:<br>");				//Shows Gross Pay
+				  for(var hours=0;hours<=nHours;hours++){	
+					  document.write(gPay[hours].toFixed(2));
+					  if(hours<nHours){
+						document.write(", ");  
+					  }
+					  else{
+						document.write(". <br>");  
+					  }
+				  }
+				
+				//Pay Rate
+				  document.write("Pay Rate:<br>");				//Shows Payrate
+				  for(var hours=0;hours<=nHours;hours++){
+					  document.write(pRate[hours].toFixed(2));
+					  if(hours<nHours){
+						document.write(", ");  
+					  }
+					  else{
+						document.write(". <br>");  
+					  }
+				  }
+				  
+				//Taxes
+				  document.write("Taxes:<br>");					//Shows Taxes
+				  for(var hours=0;hours<=nHours;hours++){
+					  document.write(taxes[hours].toFixed(2));
+					  if(hours<nHours){
+						document.write(", ");  
+					  }
+					  else{
+						document.write(". <br>");  
+					  }
+				  }
+
+				//Net Pay
+				  document.write("Net Pay:<br>");				//Shows Net Pay
+				  for(var hours=0;hours<=nHours;hours++){
+					  document.write(netPay[hours].toFixed(2));
+					  if(hours<nHours){
+						document.write(", ");  
+					  }
+					  else{
+						document.write(". <br>");  
+					  }
+				  }
+		}//End of showArray Function
+		
+		function DispTable(payRate,payRate,nHours,dblTim,trpTim,hrsWrkd,gPay,pRate,taxes,netPay){
+																		//This Function calculates and prints the 
+			topOfSpread();											   //savings spreadsheet. Only the payrate needs			
 			//Display the arrays
 			for(var hours=0;hours<=nHours;hours++){
 				document.write("<tr>");

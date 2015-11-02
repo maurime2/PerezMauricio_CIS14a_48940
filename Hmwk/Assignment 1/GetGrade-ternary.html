@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<script>
+            /*	CIS14a - 48940
+                Author: Mauricio S. Perez
+				Purpose:  Assignment 1 - Get Grade: Ternary 
+                Sept 15th, 2015
+            */
+        </script>
+        <meta charset="utf-8">
+        <title>Get Grade: Ternary </title>
+    </head>
+    
+    <body>
+        <script type="text/javascript">
+		    //Declare Variables
+			var gradePercent = 1.11;	   		 // PayRate
+			var gradeLetter = "Letter Grade";	// Letter Grade
+
+			
+			//Input Grade Percentage
+			gradePercent  = prompt("What's your Pay Rate per hour?");
+			
+			
+			//Negative Percent
+			if(gradePercent<0)	document.write("<p>You Cannot earn " + gradePercent + "%!!!!</p>");
+
+			//OVERACHIVER
+			if(gradePercent==100) document.write("<p>You are an OVERACHIVER!!! " + gradePercent + " %</p>");
+			
+			//Figure out Letter Grade
+			gradeLetter=((gradePercent<0)?"You have entered an invalid grade.":
+							   ((gradePercent<60)?"F":
+							   ((gradePercent<70)?"D":
+							   ((gradePercent<80)?"C":
+							   ((gradePercent<90)?"B":
+							   ((gradePercent<=100)?"A":
+							   "You have entered an invalid grade."))))));
+							   
+			//Print Out Letter Grade
+			if(gradeLetter!="Letter Grade")	document.write("<p>Your Letter Grade is: " + gradeLetter + "</p>");
+			
+			</script>
+    </body>
+</html>

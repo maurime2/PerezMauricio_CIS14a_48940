@@ -1,0 +1,22 @@
+Implement your Design for V2.
+
+I am interested in how you will include cookies, session storage and local storage!  See examples uploaded to the repository.  This is where you are going to store all your objects used in the project.
+
+Remembering your past requirements,
+
+1)  A personal project using the concepts in the course i.e. a game.  
+
+2)  A Business project complete with users, catalogs, shopping carts and an administrative side.
+
+
+Each project needs a design.
+
+1)  Sitemap which will have 3 sections     a)  Public Interface      b) Member Interface -> Login      c) Admin Interface -> Login
+Each Section is to have numerous web pages associated with it.  Your job for version 1 is to provide a sitemap and a pages for each section which for now just has the page description.
+
+2)  Each project needs a objects and there associated properties.
+
+ Just the design at this point!
+
+You are to use Github and a repository that has each version of your project.
+Post your results to the class website, submit your whole folder here and email to mark.lehr@rcc.edu with subject:  Lastname, Firstname - Project V2 - 48940

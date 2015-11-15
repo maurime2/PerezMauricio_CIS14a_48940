@@ -1,0 +1,7 @@
+Modify assignment 5 by utilizing the Get function for inputs found in the repository.
+
+With these inputs create a function which displays the table.
+
+Post in your repository, post your folder to the class server.
+
+zip your folder and post here, as well as sending this zip folder in an email the usual way.

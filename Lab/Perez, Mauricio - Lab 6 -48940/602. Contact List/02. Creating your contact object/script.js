@@ -1,0 +1,2 @@
+//object: Friends
+var friends = {};

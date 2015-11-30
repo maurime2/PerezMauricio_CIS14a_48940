@@ -1,0 +1,1 @@
+var myArray=[1,true,"3"];
